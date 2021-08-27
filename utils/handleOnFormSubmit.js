@@ -25,7 +25,7 @@ const handleOnFormSubmit = async (e) => {
         };
 
         const response = await fetch(
-            "http://localhost:3000/api/contact",
+            "/api/contact",
             config
         );
         const data = await response.json();
