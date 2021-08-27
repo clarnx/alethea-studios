@@ -1,11 +1,15 @@
 import { useState } from "react";
 import handleOnFormSubmit from "../../utils/handleOnFormSubmit";
+import LoadingSpinner from "./LoadingSpinner";
 
 const ContactForm = () => {
-    
+    const [isSubmitting, setIsSubmitting] = useState(false);
     return (
         <div className="w-100 w-lg-50">
-            <form className="row g-3" onSubmit={handleOnFormSubmit}>
+            <form
+                className="row g-3"
+                onSubmit={(e) => handleOnFormSubmit(e, setIsSubmitting)}
+            >
                 <div className="col-md-6">
                     <input
                         type="text"
@@ -76,7 +80,7 @@ const ContactForm = () => {
 
                 <div className="col-12">
                     <button type="submit" className="btn btn-light form_btn">
-                        Submit
+                        {isSubmitting ? <LoadingSpinner /> : "Submit"}
                     </button>
                 </div>
             </form>

@@ -1,6 +1,6 @@
 import swal from "sweetalert";
 
-const handleOnFormSubmit = async (e) => {
+const handleOnFormSubmit = async (e, setIsSubmitting) => {
     try {
         e.preventDefault();
 
@@ -23,13 +23,10 @@ const handleOnFormSubmit = async (e) => {
             },
             body: JSON.stringify(formData),
         };
-
-        const response = await fetch(
-            "/api/contact",
-            config
-        );
+        setIsSubmitting(true);
+        const response = await fetch("/api/contact", config);
         const data = await response.json();
-
+        setIsSubmitting(false);
         if (response.ok) {
             await swal("Success!", data.message, "success");
             //
