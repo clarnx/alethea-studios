@@ -38,7 +38,7 @@
 }
 
 .service_section_1__bg {
- 
+
   background-image: url('../public/images/service_1__bg.jpg');
 
 }
@@ -50,31 +50,31 @@
 }
 
 .service_section_3__bg {
-  
+
   background-image: url('../public/images/service_3__bg.jpg');
 
 }
 
 .service_section_4__bg {
-  
+
   background-image: url('../public/images/service_4__bg.jpg');
 
 }
 
 .service_section_5__bg {
- 
+
   background-image: url('../public/images/service_5__bg.jpg');
 
 }
 
 .service_section_6__bg {
- 
+
   background-image: url('../public/images/service_6__bg.jpg');
 
 }
 
 .service_section_7__bg {
-  
+
   background-image: url('../public/images/service_7__bg.jpg');
 
 }
@@ -89,4 +89,8 @@
 
 .service_section__bg_color {
   background-color: #F4F3F2;
+}
+
+.testimonial_section__bg_color {
+  background-color: aliceblue;
 }

@@ -5,6 +5,7 @@ import PriceListSection from "../components/HomePage/PriceListSection";
 import ServiceInfoSection from "../components/HomePage/ServiceInfoSection";
 import ServicesSection from "../components/HomePage/ServicesSection";
 import StorySection from "../components/HomePage/StorySection";
+import TestimonialSection from "../components/HomePage/TestimonialSection";
 import Layout from "../components/UI/Layout";
 
 export default function Home() {
@@ -15,7 +16,8 @@ export default function Home() {
             <StorySection />
             <ServicesSection />
             <ServiceInfoSection />
-            <PriceListSection/>
+            <PriceListSection />
+            <TestimonialSection/>
             <ContactSection />
         </Layout>
     );

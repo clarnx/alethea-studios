@@ -1,6 +1,6 @@
-import styles from "../../styles/Home.module.css";
 import ContactForm from "../UI/ContactForm";
 import SocialIcons from "../UI/SocialIcons";
+import styles from "../../styles/Home.module.css";
 
 const ContactSection = () => {
     return (
