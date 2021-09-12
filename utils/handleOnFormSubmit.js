@@ -23,13 +23,14 @@ const handleOnFormSubmit = async (e, setIsSubmitting) => {
             },
             body: JSON.stringify(formData),
         };
+
         setIsSubmitting(true);
         const response = await fetch("/api/contact", config);
         const data = await response.json();
         setIsSubmitting(false);
+
         if (response.ok) {
             await swal("Success!", data.message, "success");
-            //
             e.target.reset();
         } else {
             await swal(

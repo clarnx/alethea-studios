@@ -1,14 +1,34 @@
+import * as yup from "yup";
+import sendEmail from "../../utils/sendEmail";
+
 const handler = async (req, res) => {
     try {
-        const { name, email, phone, address, subject, message } = req.body;
         if (req.method === "POST") {
-            // Process a POST request
-            res.status(200).json({ message: "Form submitted!" });
+            // Validate data
+            const formDataSchema = yup.object().shape({
+                name: yup.string().min(3).max(50).required(),
+                email: yup.string().min(3).max(100).email().required(),
+                phone: yup.string().max(15),
+                address: yup.string(),
+                subject: yup.string().min(3).max(50),
+                message: yup.string().min(5).max(1000),
+            });
+
+            const formDataIsValid = await formDataSchema.isValid(req.body);
+
+            if (formDataIsValid) {
+                // Process a POST request
+                await sendEmail(req.body);
+                res.status(200).json({ message: "Form submitted!" });
+            } else {
+                res.status(400).send();
+            }
         } else {
             // Handle any other HTTP method
             res.status(405).send();
         }
     } catch (error) {
+        console.log(error.message)
         res.status(500).send();
     }
 };
