@@ -19,7 +19,9 @@ const handler = async (req, res) => {
             if (formDataIsValid) {
                 // Process a POST request
                 await sendEmail(req.body);
-                res.status(200).json({ message: "Form submitted!" });
+                res.status(200).json({
+                    message: "Your message has been received.",
+                });
             } else {
                 res.status(400).send();
             }
@@ -28,7 +30,7 @@ const handler = async (req, res) => {
             res.status(405).send();
         }
     } catch (error) {
-        console.log(error.message)
+        console.log(error.message);
         res.status(500).send();
     }
 };
