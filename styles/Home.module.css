@@ -79,6 +79,12 @@
 
 }
 
+.service_section_8__bg {
+
+  background-image: url('../public/images/service_8__bg.jpg');
+
+}
+
 .learn_more__btn {
   border-radius: 100px;
 }

@@ -120,6 +120,7 @@ const ServiceInfoSection = () => {
                 title="TickTok Ads"
                 subTitle="What Is The Target Demographic of Tiktok Ads For Your Business?"
                 image={styles.service_section_7__bg}
+                bottomBorderColor="1px solid #385d7c"
                 description={
                     <span>
                         Tiktok is on top where people are spending their time as
@@ -128,6 +129,20 @@ const ServiceInfoSection = () => {
                         advertising. We help set up Campaigns that drive great
                         (and huge!) results. So Tik Tok ads can boost your
                         business much faster.
+                    </span>
+                }
+            />
+
+            <ServiceDetails
+                title="NFT's"
+                subTitle="Already Made And Unique NFT's"
+                image={styles.service_section_8__bg}
+                description={
+                    <span>
+                        NFT’s are changing the way we trade, execute contracts,
+                        hold investments and transfer value.. if your an artist
+                        am still not using Non Fungible Token (NFT’s), you could
+                        potentially loss millions
                     </span>
                 }
             />
